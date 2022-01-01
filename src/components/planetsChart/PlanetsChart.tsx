@@ -5,7 +5,7 @@ import { PlanetType } from '../../types/PlanetType'
 import Chart from '../chart/Chart'
 import './planetsChart.css'
 
-const PlanetsChart = () => {
+const PlanetsChart = (): JSX.Element => {
     const [planets, setPlanets] = useState<PlanetType[]>([])
     const [isLoading, setIsLoading] = useState(false)
     const maxPopulation = useMemo(() => {
@@ -15,10 +15,14 @@ const PlanetsChart = () => {
 
     useEffect(() => {
         const getPlanetsPopulation = async () => {
-            setIsLoading(true)
-            const planetsRes = await getPlanetsByName()
-            setPlanets(planetsRes)
-            setIsLoading(false)
+            try {
+                setIsLoading(true)
+                const planetsRes = await getPlanetsByName()
+                setPlanets(planetsRes)
+                setIsLoading(false)
+            } catch (err) {
+                console.warn(err);
+            }
         }
 
         getPlanetsPopulation()

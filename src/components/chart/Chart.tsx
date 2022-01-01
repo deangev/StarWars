@@ -10,7 +10,7 @@ interface ChartType {
     index: number;
 }
 
-const Chart = ({ title, value, height, index }: ChartType) => {
+const Chart = ({ title, value, height, index }: ChartType): JSX.Element => {
     return (
         <div
             className='chart-item'

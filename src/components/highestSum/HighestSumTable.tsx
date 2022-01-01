@@ -5,7 +5,7 @@ import getTableData from "../../modules/getTableData";
 import { VehicleType } from "../../types/VehicleType";
 import './highestSumTable.css';
 
-const HighestSumTable = () => {
+const HighestSumTable = (): JSX.Element => {
     const [mostPopVehicle, setMostPopVehicle] = useState<VehicleType>()
     const [isLoading, setIsLoading] = useState(false)
 
