@@ -1,0 +1,16 @@
+.highest-sum-table {
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    margin: 40px auto 100px;
+}
+
+.highest-sum-table td {
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 50%;
+}
+
+.highest-sum-table div[aria-busy="true"] {
+    display: inline !important;
+}

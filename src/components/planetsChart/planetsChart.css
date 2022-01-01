@@ -1,0 +1,29 @@
+.planets-chart {
+    display: flex;
+    align-items: baseline;
+    height: 300px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 50px
+}
+
+.chart-item {
+    width: 10%;
+    position: relative;
+}
+
+.chart-item_value,
+.chart-item_title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chart-item_value {
+    top: -30px;
+}
+
+.chart-item_title {
+    bottom: -30px;
+}
